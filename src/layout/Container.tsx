@@ -3,7 +3,7 @@ import Visualize from "./Visualize/Visualize"
 
 const Container = () => {
   return (
-    <div className="flex mx-auto gap-2">
+    <div className="flex">
        <Visualize />
        <LeftContainer />
     </div>
