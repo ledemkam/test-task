@@ -3,6 +3,7 @@ import { RootState } from "../store";
 
 
 export interface IBoxProperties {
+   id :number
    inputNumber: number,
    name: string,
    value: number | string,
@@ -13,6 +14,7 @@ export interface IBoxProperties {
 
 const initialState:Array<IBoxProperties> = [
   {
+    id: 1,
     inputNumber: 1,
     name: "Border radius",
     value: 25,
@@ -20,6 +22,7 @@ const initialState:Array<IBoxProperties> = [
     minMax: [0, 250]
   },
   {
+    id: 2,
     inputNumber: 2,
     name: "Height",
     value: 250,
@@ -27,20 +30,13 @@ const initialState:Array<IBoxProperties> = [
     minMax: [0, 500]
   },
   {
+    id: 3,
     inputNumber: 3,
     name: "Width",
     value: 250,
     type: "range",
     minMax: [0, 500]
-  },
-  {
-    inputNumber: 4,
-    name: "Background color",
-    value: "#fff",
-    type: "color",
-    minMax: [0, 255],
-    slice: "boxProperties"
-  },
+  }
 ]
 
 export const boxSlices = createSlice({
