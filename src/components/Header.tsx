@@ -1,7 +1,22 @@
+import { Apple, Search, ShoppingBag } from 'lucide-react';
+import { header } from '../constant';
+
 export default function Header() {
   return (
-    <header className="p-4 border-b-2 border-gray-200">
-      <h1 className="text-xl text-center uppercase font-semibold">Boxy generator</h1>
+    <header className="text-white bg-primary flex justify-center p-3">
+      <div>
+      </div>
+      <nav className='flex justify-between gap-6'>
+        <Apple/>
+        {
+          header.map((item) => (
+            <div key={item.id}>{item.label}</div>
+          ))
+        }
+        <Search />
+        <ShoppingBag />
+      </nav>
+  
     </header>
   )
 }
